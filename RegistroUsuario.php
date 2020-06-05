@@ -20,6 +20,6 @@ $password = $_POST['Password'];
 /////////////////////// CONSULTA A LA BASE DE DATOS ////////////////////////
 $res=$conexion->query("insert into empleado (Nombre,Apellido, nickname, password) values('$nombre', '$apellido', '$nickname', '$password')");
 if($res){
-echo 'Accion exitosa.';
+//echo 'Accion exitosa.';
 }
 ?>
