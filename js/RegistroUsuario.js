@@ -9,7 +9,10 @@ function CargarUsuario(){
     $.ajax({
         type: 'POST',
         url: 'RegistroUsuario.php',
-        data: cadena
+        data: cadena,
+        success: function(){
+            alert("Usuario registrado");
+        }
     });
 }
 
