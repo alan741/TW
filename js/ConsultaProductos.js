@@ -24,6 +24,8 @@ function cargarFuncion()
 }
 setInterval(cargarFuncion, 5000);
 
+
+
 function EliminarProducto(boton){
     var cadena = {
         'cadena' : `DELETE FROM producto WHERE ProductoID = ${boton.id}`
@@ -53,8 +55,46 @@ function ConfigurarProducto(boton){
         data: cadena,
         datatype: 'json',
         success: function(json){
+            document.getElementById('inputID').value = $(json)[0].id;
             document.getElementById('inputNombre').value = $(json)[0].nombre;
             document.getElementById('inputPrecio').value = $(json)[0].precio;
+        }
+    });
+}
+
+function AgregarProducto()
+{
+        var cadena = {
+        'inputNewNombre': document.getElementById('inputNewNombre').value,
+        'inputNewPrecio' : document.getElementById('inputNewPrecio').value
+    };
+    
+    $.ajax({
+        type: 'POST',
+        url: 'InsertarProductos.php',
+        data: cadena,
+        datatype: 'json',
+        success: function(json){
+            alert("Agregado");
+        }
+    });
+}
+
+function Actualizar()
+{
+        var cadena = {
+        'inputNombre': document.getElementById('inputNombre').value,
+        'inputID': document.getElementById('inputID').value,
+        'inputPrecio' : document.getElementById('inputPrecio').value
+    };
+    
+    $.ajax({
+        type: 'POST',
+        url: 'ModificarProductos.php',
+        data: cadena,
+        datatype: 'json',
+        success: function(json){
+            alert("Modificado");
         }
     });
 }

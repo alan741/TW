@@ -72,10 +72,12 @@
             </table>>
           </div> 
           <div class="col-md-6">
-
+              <h1 class="font-weight-light">Productos actuales</h1>
               <br>
-              <form id="miForma" method="POST" class="form-group">
-
+              <form id="miForma"  class="form-group">
+                  <label >ID del producto</label>
+                     <input type="number" name="inputPrecio" id="inputID" class="form-control disabled" placeholder="ID del producto a modificar"  readonly>
+                    <br>
                      <label >Nombre del producto</label>
                      <input type="text" name="inputNombre" id="inputNombre" class="form-control" placeholder="Escriba el nuevo nombre del producto">
 
@@ -85,15 +87,48 @@
                      <input type="number" name="inputPrecio" id="inputPrecio" class="form-control" placeholder="Escriba el nuevo precio del producto">
                     <br>
                     
-                <button type="button" id="btnAgregar" class="btn btn-success">Actualizar producto</button>
+                <button type="button"  class="btn btn-success" onclick="Actualizar()">Actualizar producto</button>
               </form>         
           </div>
       </div>
     </div>
 </div>
 
+<div class="jumbotron jumbotron-fluid text-center jtron">
+      <div class="container jtron">
+          <div class="row">
+            <div class="col-md-3">
+              
+          </div>
+          <div class="col-md-6">
+            <h1 class="font-weight-light">¡Agrega un producto!</h1>
+
+              <br>
+              <form id="miForma"  class="form-group">
+
+                     <label >Nombre del producto</label>
+                     <input type="text" name="inputNewNombre" id="inputNewNombre" class="form-control " placeholder="Escriba el nuevo nombre del producto">
+
+                    <br>
+                    
+                     <label >Precio del producto</label>
+                     <input type="number" name="inputNewPrecio" id="inputNewPrecio" class="form-control" placeholder="Escriba el nuevo precio del producto">
+                    <br>
+                    
+                <button type="button" onclick="AgregarProducto()" class="btn btn-success">Agregar producto</button>
+              </form>         
+          </div>
+              
+          </div>
+      </div>
+    </div>
+
+
+
+
+
+
   <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
-    <script src="js/InsertarProducto.js"> </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>

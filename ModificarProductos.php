@@ -2,8 +2,9 @@
 
 error_reporting(0);
 header('Content-type: application/json; charset=utf-8');
-$var = $_POST['inputNewNombre'];
-$var2 = $_POST['inputNewPrecio'];
+$var = $_POST['inputNombre'];
+$var2 = $_POST['inputPrecio'];
+$var3 = $_POST['inputID'];
 $conexion = new mysqli('localhost', 'root', '', 'tastywings');
 
 if($conexion->connect_errno){
@@ -12,9 +13,8 @@ if($conexion->connect_errno){
 	];
 } else {
 	$conexion->set_charset("utf8");
-	$statement = $conexion->prepare("INSERT INTO producto(Nombre,Precio) VALUES ('$var','$var2')");
+	$statement = $conexion->prepare("UPDATE producto SET Nombre = '$var', Precio = '$var2' WHERE ProductoID = '$var3'");
 	$statement->execute();
         
         echo json_encode($respuesta = []);
 }
-
