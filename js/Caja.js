@@ -111,7 +111,7 @@ function HacerRetiro()
 }
 
 function EliminarCaja(){
-    alert("Base de datos de caja ELIMINADA!!!");
+    alert("Base de datos de caja ELIMINADA!!");
         $.ajax({
         type: 'POST',
         url: 'EliminarCaja.php',
