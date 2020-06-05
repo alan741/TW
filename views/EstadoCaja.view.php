@@ -72,7 +72,27 @@
                 </div>
             </div>
         </div> 
-    <button  class="btn btn-primary" id="Retiro" onclick="HacerRetiro()">Realizar retiro</button>
+    <button  class="btn btn-primary" id="Retiro" onclick="HacerRetiro()" data-toggle="modal" data-target="#ventana2">Realizar retiro</button>
+
+    <div class="modal" id="ventana2" tabindex="-1" role="dialog" >
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title">Compra exitosa</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Compra realizada</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
     </div>
     
   </fieldset>
@@ -87,9 +107,28 @@
     <div class="form-group">
       <input type="text" class="form-control" id="inputReconfigurar" placeholder="Cantidad actualizada de caja">
     </div>
-      <button type="submit" class="btn btn-primary" onclick="ActualizarCaja()">Actualizar caja</button>
+      <button type="submit" class="btn btn-primary" onclick="ActualizarCaja()" data-toggle="modal" data-target="#ventana3">Actualizar caja</button>
     </fieldset>
     </div>
+
+    <div class="modal" id="ventana3" tabindex="-1" role="dialog" >
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title">Compra exitosa</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Compra realizada</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
   
 </form>  
   </div>
@@ -97,7 +136,25 @@
 
 <div class="jumbotron jumbotron-fluid text-center jtron">
       <div class="container jtron">
-          <button type="button" class="btn btn-danger" onclick="EliminarCaja()">Eliminar historial de caja</button>
+          <button type="button" class="btn btn-danger" onclick="EliminarCaja()" data-toggle="modal" data-target="#ventana4">Eliminar historial de caja</button>
+          <div class="modal" id="ventana4" tabindex="-1" role="dialog" >
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title">Tarea realizada exitosamente</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Historial de compra eliminado</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
           <br>
           <br>
       <div class="row">

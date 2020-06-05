@@ -87,7 +87,25 @@
                      <input type="number" name="inputPrecio" id="inputPrecio" class="form-control" placeholder="Escriba el nuevo precio del producto">
                     <br>
                     
-                <button type="button"  class="btn btn-success" onclick="Actualizar()">Actualizar producto</button>
+                <button type="button"  class="btn btn-success" onclick="Actualizar()" data-toggle="modal" data-target="#ventana5">Actualizar producto</button>
+                <div class="modal" id="ventana5" tabindex="-1" role="dialog" >
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title">Tarea realizada exitosamente</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Producto actualizado</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
               </form>         
           </div>
       </div>
@@ -115,7 +133,25 @@
                      <input type="number" name="inputNewPrecio" id="inputNewPrecio" class="form-control" placeholder="Escriba el nuevo precio del producto">
                     <br>
                     
-                <button type="button" onclick="AgregarProducto()" class="btn btn-success">Agregar producto</button>
+                <button type="button" onclick="AgregarProducto()" class="btn btn-success" data-toggle="modal" data-target="#ventana6">Agregar producto</button>
+                <div class="modal" id="ventana6" tabindex="-1" role="dialog" >
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title">Tarea realizada exitosamente</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Producto agregado</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
               </form>         
           </div>
               

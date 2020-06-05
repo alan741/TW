@@ -6,7 +6,7 @@ $(document).ready(function(){
            url:"InsertarProductos.php",
            data: datos,
            success:function(variable){
-               alert(variable);
+               //alert(variable);
            }
         });
         //Para evitar que recargue la página

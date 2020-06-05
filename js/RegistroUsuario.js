@@ -11,7 +11,6 @@ function CargarUsuario(){
         url: 'RegistroUsuario.php',
         data: cadena,
         success: function(){
-            alert("Usuario registrado");
         }
     });
 }

@@ -75,7 +75,6 @@ function AgregarProducto()
         data: cadena,
         datatype: 'json',
         success: function(json){
-            alert("Agregado");
         }
     });
 }
@@ -94,7 +93,6 @@ function Actualizar()
         data: cadena,
         datatype: 'json',
         success: function(json){
-            alert("Modificado");
         }
     });
 }

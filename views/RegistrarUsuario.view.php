@@ -71,7 +71,25 @@
     <label>Password</label>
     <input type="text" class="form-control" id="Password" placeholder="Recuerda colocar una contraseña con alto grado de seguridad">
   </div>
-          <button type="button" onclick="CargarUsuario()" class="btn btn-success">Registrar empleado</button>
+          <button type="button" onclick="CargarUsuario()" class="btn btn-success" data-toggle="modal" data-target="#ventana6">Registrar empleado</button>
+          <div class="modal" id="ventana6" tabindex="-1" role="dialog" >
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title">Tarea realizada exitosamente</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Producto actualizado</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 </form>
 
   </div> 

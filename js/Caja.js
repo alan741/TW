@@ -50,7 +50,6 @@ function ActualizarCaja(){
             
         }
     });
-    alert("Caja reconfigurada!!!");
 }
 
 function Evaluar(){
@@ -97,7 +96,7 @@ function HacerRetiro()
                 };
                 
                 
-                alert("Retiro exitoso");
+                //alert("Retiro exitoso");
                 $.ajax({                        
                    type: "POST",                 
                    url: 'ActualizarCaja.php',                     
@@ -111,7 +110,6 @@ function HacerRetiro()
 }
 
 function EliminarCaja(){
-    alert("Base de datos de caja ELIMINADA!!");
         $.ajax({
         type: 'POST',
         url: 'EliminarCaja.php',
