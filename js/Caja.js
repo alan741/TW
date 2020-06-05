@@ -47,7 +47,76 @@ function ActualizarCaja(){
         url: 'ReconfigurarCaja.php',
         data: cadena,
         success: function(){
-            alert("Caja reconfigurada!!!");
+            
+        }
+    });
+    alert("Caja reconfigurada!!!");
+}
+
+function Evaluar(){
+    document.getElementById('Final').value=0;
+    $.ajax({                        
+           type: "GET",
+           url: 'ObtenerUltimoCaja.php',                     
+           datatype:'json',
+           success: function(json){
+               var caja=0.0;
+               if(!$.isEmptyObject(json)){
+                  caja= json[0].id;
+                  if((caja - parseFloat(document.getElementById('MontoRetirar').value))<0){
+                      document.getElementById('Retiro').disabled=true;
+                      document.getElementById('Final').value="La cantidad a retirar es mayor a lo que tienes en caja";
+                  }
+                  else
+                  {
+                      document.getElementById('Retiro').disabled=false;
+                      document.getElementById('Final').value=caja - parseFloat(document.getElementById('MontoRetirar').value);
+
+                  }
+               }
+           }
+       });
+}
+
+function HacerRetiro()
+{
+         $.ajax({                        
+           type: "GET",
+           url: 'ObtenerUltimoCaja.php',                     
+           datatype:'json',
+           success: function(json){
+               var caja=0.0;
+               if(!$.isEmptyObject(json)){
+                  caja= json[0].id;
+                  var datos = {
+                "caso": '2',
+                "cantidad" : document.getElementById('MontoRetirar').value,
+                "caja": caja,
+                "descripcion": "Retiro",
+                "empleado": "10"
+                };
+                
+                
+                alert("Retiro exitoso");
+                $.ajax({                        
+                   type: "POST",                 
+                   url: 'ActualizarCaja.php',                     
+                   data: datos,
+                   success: function(){
+                }
+                 });
+               }
+           }
+       });
+}
+
+function EliminarCaja(){
+    alert("Base de datos de caja ELIMINADA!!!");
+        $.ajax({
+        type: 'POST',
+        url: 'EliminarCaja.php',
+        success: function(){
+            
         }
     });
 }

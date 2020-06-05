@@ -58,25 +58,23 @@
     <h1 class="font-weight-light">¿Deseas realizar un retiro de caja?</h1>
 <form>
   <fieldset>
-    <div class="form-group">
-        <input class="form-control" type="number" min="0" max="9" maxlength="8"  placeholder="Descripción de retiro">
-    </div>
     <div class="row">
         <div class="col-md-6"> 
             <div class="form-group">
                 <label for="formGroupExampleInput">Monto a retirar</label>
-                <input type="text" class="form-control" placeholder="Escribe la cantidad en pesos">
+                <input type="number" class="form-control"  maxlength="8" placeholder="Escribe la cantidad en pesos" id="MontoRetirar" onkeypress="Evaluar()">
             </div>
         </div>
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="formGroupExampleInput">Estado final</label>
-                    <input type="text"  class="form-control disabled" placeholder="Monto final en caja" readonly>
+                    <input type="text"  class="form-control disabled" id="Final" placeholder="Monto final en caja" readonly>
                 </div>
             </div>
         </div> 
-    <button type="submit" class="btn btn-primary">Realizar retiro</button>
+    <button  class="btn btn-primary" id="Retiro" onclick="HacerRetiro()">Realizar retiro</button>
     </div>
+    
   </fieldset>
 </form>  
   </div>
@@ -99,7 +97,7 @@
 
 <div class="jumbotron jumbotron-fluid text-center jtron">
       <div class="container jtron">
-          <button type="button" class="btn btn-danger">Eliminar historial de caja</button>
+          <button type="button" class="btn btn-danger" onclick="EliminarCaja()">Eliminar historial de caja</button>
           <br>
           <br>
       <div class="row">
