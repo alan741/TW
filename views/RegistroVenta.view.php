@@ -54,7 +54,45 @@
 
 <div class="jumbotron jumbotron-fluid text-center jtron">
       <div class="container jtron">
-          <button type="button" class="btn btn-danger" onclick="EliminarHistorialVentas()">Eliminar historial de ventas</button>
+          <button type="button" class="btn btn-danger" onclick="EliminarHistorialVentas()" data-toggle="modal" data-target="#ventana6">Eliminar historial de ventas</button>
+                    <div class="modal" id="ventana6" tabindex="-1" role="dialog" >
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title dispaly-5">Tarea realizada exitosamente</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Eliminaste el registro de ventas.</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+          
+          <div class="modal" id="ventana7" tabindex="-1" role="dialog" >
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title dispaly-5">Tarea realizada exitosamente</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Eliminaste una venta...</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+          
           <br>
           <br>
       <div class="row">

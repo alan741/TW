@@ -15,7 +15,7 @@ function cargarFuncion()
             <th>${json[i].id}</th>
             <td>${json[i].nombre}</td>
             <td>${json[i].precio}</td>
-            <td><button class="btn btn-danger" id="${json[i].id}" name="${json[i].nombre}" onclick="EliminarProducto(this)">Eliminar</button></td>
+            <td><button class="btn btn-danger" id="${json[i].id}" name="${json[i].nombre}" onclick="EliminarProducto(this)" data-toggle="modal" data-target="#ventana6">Eliminar</button></td>
             <td><button class="btn btn-warning" id="${json[i].id} name="${json[i].nombre}" onclick="ConfigurarProducto(this)">Editar</button></td>
             </tr>` ;
 	}		
@@ -37,7 +37,6 @@ function EliminarProducto(boton){
         data: cadena,
         async: false,
         complete: function(){
-            alert(`Eliminaste el producto: ${boton.name}`);
             document.getElementById('inputNombre').value = '';
             document.getElementById('inputPrecio').value = '';
         }
@@ -77,6 +76,9 @@ function AgregarProducto()
         success: function(json){
         }
     });
+    
+    document.getElementById('inputNewNombre').value = "";
+    document.getElementById('inputNewPrecio').value= "";
 }
 
 function Actualizar()
@@ -95,4 +97,8 @@ function Actualizar()
         success: function(json){
         }
     });
+    
+    document.getElementById('inputNombre').value ="";
+    document.getElementById('inputID').value="";
+    document.getElementById('inputPrecio').value="";
 }

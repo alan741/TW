@@ -26,7 +26,7 @@ function cargarFuncion()
           <td>${json[i].nombre}</td>
           <td>${json[i].password}</td>
           
-          <td><button class="btn btn-danger" id="${json[i].id}" name="${json[i].nombre}" onclick="CancelarVenta(this)">Eliminar</button></td>
+          <td><button class="btn btn-danger" id="${json[i].id}" name="${json[i].nombre}" onclick="CancelarVenta(this)" data-toggle="modal" data-target="#ventana7">Eliminar</button></td>
           </tr>` ;
 		}		
 }   
@@ -64,7 +64,6 @@ function CancelarVenta(boton){
                    url: 'ActualizarCaja.php',                     
                    data: datos,
                    success: function(){ 
-                       alert("se elimino de caja");
                 }
                  });
            }
@@ -75,8 +74,7 @@ function CancelarVenta(boton){
          url : 'CancelarVenta.php',
          data: a, 
          async:false,
-         complete : function(){	
-        alert("eliminado");
+         complete : function(){
     }   
     });
 }

@@ -56,8 +56,6 @@
 <div class="jumbotron jumbotron-fluid text-center jtron">
   <div class="container jtron">
     <h1 class="font-weight-light">¿Deseas realizar un retiro de caja?</h1>
-<form>
-  <fieldset>
     <div class="row">
         <div class="col-md-6"> 
             <div class="form-group">
@@ -93,22 +91,17 @@
                       </div>
                     </div>
 
-    </div>
-    
-  </fieldset>
-</form>  
+    </div> 
   </div>
 
 <div class="jumbotron jumbotron-fluid text-center jtron">
   <div class="container jtron">
     <h1 class="font-weight-light">¿Por alguna razón tienes que reconfigurar la caja?</h1>
-<form>
-  <fieldset>
+
     <div class="form-group">
       <input type="text" class="form-control" id="inputReconfigurar" placeholder="Cantidad actualizada de caja">
     </div>
       <button type="submit" class="btn btn-primary" onclick="ActualizarCaja()" data-toggle="modal" data-target="#ventana3">Actualizar caja</button>
-    </fieldset>
     </div>
 
     <div class="modal" id="ventana3" tabindex="-1" role="dialog" >
@@ -128,10 +121,8 @@
                           </div>
                         </div>
                       </div>
-                    </div>
-  
-</form>  
-  </div>
+                    </div>  
+</div>
 
 
 <div class="jumbotron jumbotron-fluid text-center jtron">

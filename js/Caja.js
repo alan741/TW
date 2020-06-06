@@ -73,6 +73,11 @@ function Evaluar(){
 
                   }
                }
+               else
+               {
+                   document.getElementById('Final').value="No hay registro en caja";
+
+               }
            }
        });
 }
@@ -96,7 +101,7 @@ function HacerRetiro()
                 };
                 
                 
-                //alert("Retiro exitoso");
+                
                 $.ajax({                        
                    type: "POST",                 
                    url: 'ActualizarCaja.php',                     
